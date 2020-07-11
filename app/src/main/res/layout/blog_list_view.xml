@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#28ECB4B0"
+    android:clipToPadding="false"
+    android:scrollbarStyle="insideOverlay"
+    android:soundEffectsEnabled="true">
+
+    <TextView
+        android:id="@+id/listviewnumlikes"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="2dp"
+        android:text="22"
+        app:layout_constraintBottom_toTopOf="@+id/listviewlikebtn2"
+        app:layout_constraintEnd_toEndOf="@+id/listviewlikebtn2"
+        app:layout_constraintStart_toEndOf="@+id/listviewlikebtn"
+        app:layout_constraintTop_toBottomOf="@+id/listviewlikebtn2" />
+
+    <TextView
+        android:id="@+id/listviewtime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:text="10:30 Pm , India"
+        android:textColor="@color/common_google_signin_btn_text_dark_focused"
+        android:textSize="10sp"
+        app:layout_constraintBottom_toBottomOf="@+id/listviewblogname"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/listviewblogname"
+        app:layout_constraintTop_toTopOf="@+id/listviewblogname" />
+
+    <TextView
+        android:id="@+id/listviewblogname"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="My First Program"
+        android:textColor="@color/common_google_signin_btn_text_dark_focused"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/listviewtime"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+    <TextView
+        android:id="@+id/listviewblogtext"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="8dp"
+        android:gravity="start|center_horizontal|left"
+        android:text="Now a days nepotism is like a king of media such as movies shows and all everyone is nepotism in Bollywood there are only few who are still there themselves but they face many problem to stand there alone they all need one king to get support from them and be a next king of media no nepotism no any other only one who pay hard work are only king .Goodbye Nepotism"
+        android:textAlignment="gravity"
+        android:textColor="@color/common_google_signin_btn_text_dark_focused"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/listviewblogname" />
+
+    <ImageView
+        android:id="@+id/listviewlikebtn"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:background="@drawable/likeme"
+        app:layout_constraintBottom_toTopOf="@+id/listviewlikebtn2"
+        app:layout_constraintStart_toStartOf="@+id/listviewlikebtn2"
+        app:layout_constraintTop_toBottomOf="@+id/listviewlikebtn2" />
+
+    <ToggleButton
+        android:id="@+id/listviewlikebtn2"
+        android:layout_width="45dp"
+        android:layout_height="34dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="#00FFFFFF"
+        android:checked="false"
+        android:textColor="#00FFFFFF"
+        android:textSize="1dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/listviewblogtext" />
+
+    <ImageView
+        android:id="@+id/givecommentbtn"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/listviewnumlikes"
+        app:layout_constraintTop_toBottomOf="@+id/listviewblogtext"
+        app:srcCompat="@drawable/comment" />
+
+    <TextView
+        android:id="@+id/numcomment"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="2dp"
+        android:layout_marginBottom="8dp"
+        android:text="22"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/givecommentbtn"
+        app:layout_constraintTop_toBottomOf="@+id/listviewblogtext" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/listviewblogname"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/profileorange" />
+
+    <ImageView
+        android:id="@+id/blogoptionsmenu"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/listviewtime"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/options" />
+
+    <TextView
+        android:id="@+id/blogusername"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="2dp"
+        android:text="Ravi Thakur"
+        android:textColor="#000000"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/blogoptionsmenu"
+        app:layout_constraintStart_toEndOf="@+id/imageView"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/bloguseremail"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="2dp"
+        android:layout_marginEnd="2dp"
+        android:text="thakurravi@gmail.com"
+        android:textColor="#000000"
+        android:textSize="10sp"
+        app:layout_constraintEnd_toStartOf="@+id/blogoptionsmenu"
+        app:layout_constraintStart_toEndOf="@+id/imageView"
+        app:layout_constraintTop_toBottomOf="@+id/blogusername" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

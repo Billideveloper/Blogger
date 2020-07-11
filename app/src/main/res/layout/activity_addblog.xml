@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".addblog">
+
+    <ToggleButton
+        android:id="@+id/techcategry"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:background="@drawable/state_toggle"
+        android:onClick="addtech"
+        android:text="ToggleButton"
+        android:textColor="@color/common_google_signin_btn_text_dark_focused"
+        android:textOff="Tech"
+        android:textOn="Tech"
+        app:layout_constraintEnd_toStartOf="@+id/travelcategry"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ToggleButton
+        android:id="@+id/travelcategry"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:background="@drawable/state_toggle"
+        android:onClick="addtravel"
+        android:text="ToggleButton"
+        android:textColor="@color/common_google_signin_btn_text_dark_focused"
+        android:textOff="Travel"
+        android:textOn="Travel"
+        app:layout_constraintBottom_toBottomOf="@+id/techcategry"
+        app:layout_constraintEnd_toStartOf="@+id/mediacategry"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/techcategry"
+        app:layout_constraintTop_toTopOf="@+id/techcategry" />
+
+    <ToggleButton
+        android:id="@+id/mediacategry"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:background="@drawable/state_toggle"
+        android:onClick="addmedia"
+        android:text="ToggleButton"
+        android:textColor="@color/common_google_signin_btn_text_dark_focused"
+        android:textOff="Media"
+        android:textOn="Media"
+        app:layout_constraintBottom_toBottomOf="@+id/travelcategry"
+        app:layout_constraintEnd_toStartOf="@+id/socialcategory"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/travelcategry"
+        app:layout_constraintTop_toTopOf="@+id/travelcategry" />
+
+    <ToggleButton
+        android:id="@+id/socialcategory"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:background="@drawable/state_toggle"
+        android:onClick="addsocial"
+        android:text="ToggleButton"
+        android:textColor="@color/common_google_signin_btn_text_dark_focused"
+        android:textOff="More"
+        android:textOn="More"
+        app:layout_constraintBottom_toBottomOf="@+id/mediacategry"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/mediacategry"
+        app:layout_constraintTop_toTopOf="@+id/mediacategry" />
+
+    <EditText
+        android:id="@+id/blogname"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="8dp"
+        android:ems="0"
+        android:gravity="center"
+        android:hint="Give your blogName"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/techcategry" />
+
+    <EditText
+        android:id="@+id/blogtext"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:ems="10"
+        android:gravity="start|top"
+        android:inputType="textMultiLine"
+        android:textColorHighlight="?attr/colorError"
+        android:textColorLink="@android:color/holo_red_light"
+        app:layout_constraintBottom_toTopOf="@+id/addblogs"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/blogname" />
+
+    <Button
+        android:id="@+id/addblogs"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/state_chacked"
+        android:onClick="addblog"
+        android:text="Share Blog"
+        android:textColor="@color/cardview_light_background"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ProgressBar
+        android:id="@+id/progressbar"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:background="@drawable/whiteback"
+        app:layout_constraintBottom_toBottomOf="@+id/blogtext"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/techcategry" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
